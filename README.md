@@ -105,3 +105,4 @@ print(sorted_transactions)
 
 ## Лицензия
 Этот проект распространяется под лицензией MIT. Подробнее см. файл [LICENSE](http://www.opensource.org/licenses/mit-license.php).
+```
