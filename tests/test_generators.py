@@ -96,4 +96,6 @@ def test_card_number_generator_invalid_range() -> None:
     generator = card_number_generator(0, 999)
     with pytest.raises(ValueError):
         next(generator)
+
+#Изменение для коммита
         

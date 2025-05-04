@@ -75,4 +75,6 @@ def test_mask_account_card_with_fixture(sample_account_data: list[str]) -> None:
     ]
     for account, expected in zip(sample_account_data, expected_results):
         assert mask_account_card(account) == expected
+
+#Изменение для коммита        
         
