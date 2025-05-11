@@ -1,4 +1,4 @@
-from typing import Iterator, List, Dict
+from typing import Iterator, List, Dict, Union
 import random
 
 def filter_by_currency(transactions: List[Dict], currency: str) -> Iterator[Dict]:
@@ -26,20 +26,23 @@ def transaction_descriptions(transactions: List[Dict]) -> Iterator[str]:
         yield description
 
 
-def card_number_generator(start: int, stop: int) -> Iterator[str]:
+def card_number_generator(start: int, stop: int, limit: Union[int, None] = None) -> Iterator[str]:
     """
     Генерирует номера банковских карт в формате XXXX XXXX XXXX XXXX.
 
     :param start: Начальное значение диапазона.
     :param stop: Конечное значение диапазона.
+    :param limit: Максимальное количество генерируемых номеров (по умолчанию None - без ограничения).
     :return: Итератор, возвращающий номера карт.
     :raises ValueError: Если диапазон некорректный (меньше 1000 или больше 9999).
     """
     if start < 1000 or stop > 9999:
         raise ValueError("Диапазон должен быть в пределах [1000, 9999]")
     
-    while True:
+    count = 0
+    while limit is None or count < limit:
         # Генерируем 4 группы по 4 цифры
         card_number_parts = [f"{random.randint(start, stop):04}" for _ in range(4)]
         yield ' '.join(card_number_parts)
-        
+        count += 1
+            
