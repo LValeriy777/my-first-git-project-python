@@ -93,9 +93,10 @@ def test_card_number_generator() -> None:
         assert all(part.isdigit() for part in parts)
 
 def test_card_number_generator_invalid_range() -> None:
-    generator = card_number_generator(0, 999)
     with pytest.raises(ValueError):
-        next(generator)
+        next(card_number_generator(0, 999))  # start < 1000
+    with pytest.raises(ValueError):
+        next(card_number_generator(10000, 99999))  # stop > 9999
 
 #Изменение для коммита
         
