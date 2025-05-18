@@ -143,6 +143,43 @@ for card_number in card_number_generator(1000, 9999):
 ```bash
 pytest
 ```
+## Новый модуль: decorators
+
+Модуль `decorators` содержит декораторы для логирования работы функций.
+
+### Пример использования декоратора `log`
+
+#### Логирование в файл
+```python
+@log(filename="mylog.txt")
+def my_function(x, y):
+    return x + y
+```
+
+#### Логирование в консоль
+```python
+my_function(1, 2)
+
+@log()
+def my_function(x, y):
+    return x + y
+```
+
+#### Логирование при ошибке
+```python
+my_function(1, 2)
+
+@log(filename="error_log.txt")
+def my_function(x, y):
+    return x / y
+
+try:
+    my_function(1, 0)
+except ZeroDivisionError:
+    pass
+```
+
+---
 
 ### Генерация отчета о покрытии кода
 Для генерации отчета о покрытии кода используется плагин `pytest-cov`. Выполните команду:

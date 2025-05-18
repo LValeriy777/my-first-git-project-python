@@ -1,0 +1,2 @@
+2025-05-18 08:53:11,575 - INFO - Function test_func started with args: (1, 2), kwargs: {}
+2025-05-18 08:53:11,578 - INFO - Function test_func finished successfully. Result: 3
