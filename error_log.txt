@@ -1,2 +1,16 @@
 2025-05-18 08:53:11,732 - INFO - Function test_func started with args: (1, 0), kwargs: {}
 2025-05-18 08:53:11,738 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 11:56:55,125 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 11:56:55,127 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 12:01:34,262 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 12:01:34,263 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 12:06:31,606 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 12:06:31,607 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 12:07:34,668 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 12:07:34,670 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 12:08:39,509 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 12:08:39,518 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 12:09:18,305 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 12:09:18,306 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
+2025-05-18 12:10:18,783 - INFO - Function test_func started with args: (1, 0), kwargs: {}
+2025-05-18 12:10:18,785 - ERROR - Function test_func failed with error: ZeroDivisionError. Inputs: (1, 0), {}
