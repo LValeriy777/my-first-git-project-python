@@ -2,7 +2,7 @@ import logging
 from functools import wraps
 from typing import Callable, Any, Optional
 
-def log(filename: Optional[str] = None) -> Callable[[Callable], Callable]:
+def log(filename: Optional[str] = None) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
     """
     Декоратор для логирования работы функции.
 
@@ -10,10 +10,11 @@ def log(filename: Optional[str] = None) -> Callable[[Callable], Callable]:
     """
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @wraps(func)
-        def wrapper(*args, **kwargs) -> Any:
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             # Настройка логгера
             logger = logging.getLogger(func.__name__)
-            handler: logging.Handler  # Объявление переменной с общим типом Handler
+            logger.handlers.clear()  # Очистка предыдущих обработчиков
+            handler: logging.Handler
             if filename:
                 handler = logging.FileHandler(filename)
             else:
